@@ -3,14 +3,14 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')   // Jenkins credentials ID
-        DOCKER_IMAGE = 'your-dockerhub-username/appointment-app'  // Replace with your DockerHub username
+        DOCKER_IMAGE = 'kavyakota18/appointment-app'  // Replace with your DockerHub username
     }
 
     stages {
         stage('Checkout Code') {
             steps {
                 echo 'Cloning repository...'
-                git branch: 'main', url: 'https://github.com/your-username/appointment-booking-system.git'
+                git branch: 'main', url: 'https://github.com/kavyakota8/appointment-booking-system.git'
             }
         }
 
