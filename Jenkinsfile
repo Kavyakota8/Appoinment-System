@@ -6,13 +6,15 @@ pipeline {
         DOCKER_IMAGE = 'kavyakota18/appointment-app'  // Replace with your DockerHub username
     }
 
-    stages {
-        stage('Checkout Code') {
-            steps {
-                echo 'Cloning repository...'
-                git branch: 'main', url: 'https://github.com/kavyakota8/appointment-booking-system.git'
-            }
-        }
+    stage('Checkout Code') {
+    steps {
+        echo '📥 Cloning repository...'
+        git branch: 'main', 
+            credentialsId: 'github-creds', 
+            url: 'https://github.com/kavyakota8/appointment-booking-system.git'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
