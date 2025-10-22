@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>All Appointments</title></head>
+<body>
+    <h2>All Booked Appointments</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th><th>Email</th><th>Date</th><th>Time</th><th>Purpose</th>
+        </tr>
+        {% for a in appointments %}
+        <tr>
+            <td>{{ a.name }}</td>
+            <td>{{ a.email }}</td>
+            <td>{{ a.date }}</td>
+            <td>{{ a.time }}</td>
+            <td>{{ a.purpose }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>
